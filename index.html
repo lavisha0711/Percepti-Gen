@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Description Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Perceptigen Logo" class="logo">
+    <h1 class="fade-in-text">  Image Description Tool</h1>
+    <p class="slide-in-text">Upload an image, and I'll tell you what's in it!</p>
+    <input type="file" id="imageUpload" accept="image/*">
+    <br>
+    <button id="analyzeButton" class="bounce-button">Analyze Image</button>
+    <pre id="result" class="fade-in-result">Result will appear here...</pre>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
