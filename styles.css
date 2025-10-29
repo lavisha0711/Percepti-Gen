@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Avoid scrolling */
+}
+
+/* Main Container */
+.container {
+  width: 80%; /* Increase the width of the container */
+  height: 80%; /* Allow the container to take up most of the vertical space */
+  max-width: 1000px; /* Maximum width for larger screens */
+  max-height: 90%; /* Limit the height for readability */
+  padding: 30px; /* Adequate padding for spacing */
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center everything vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Logo Styling */
+.logo {
+  max-width: 300px; /* Increased logo size */
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  border-radius: 50%; /* Circular shape for the logo */
+  border: 6px solid rgba(255, 255, 255, 0.8); /* Add a glowing border */
+  animation: elegantGlowNoRotation 6s infinite cubic-bezier(0.42, 0, 0.58, 1); /* Updated animation */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Refined glowing shadow */
+}
+
+/* Refined Logo Animation (No Rotation) */
+@keyframes elegantGlowNoRotation {
+  0% {
+    transform: scale(1); /* No rotation */
+    border-color: rgba(255, 255, 255, 0.8); /* Initial border color */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Subtle glow */
+  }
+  25% {
+    transform: scale(1.1); /* Slight scaling */
+    border-color: rgba(255, 215, 0, 0.9); /* Golden border glow */
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.9); /* Intense golden glow */
+  }
+  50% {
+    transform: scale(1.15); /* More pronounced scaling */
+    border-color: rgba(173, 216, 230, 1); /* Soft blue glow */
+    box-shadow: 0 0 50px rgba(173, 216, 230, 1); /* Strong blue shadow */
+  }
+  75% {
+    transform: scale(1.1); /* Scale down slightly */
+    border-color: rgba(144, 238, 144, 0.9); /* Light green glow */
+    box-shadow: 0 0 40px rgba(144, 238, 144, 0.9); /* Reduced green glow */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+    border-color: rgba(255, 255, 255, 0.8); /* Reset border color */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Return to subtle glow */
+  }
+}
+
+/* Title and Subtitle */
+.fade-in-text {
+  font-size: 3em; /* Larger title */
+  margin: 10px 0;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.slide-in-text {
+  font-size: 1.5em; /* Larger subtitle */
+  margin: 10px 0;
+  animation: fadeInUp 2s ease-out;
+}
+
+/* Input Field */
+input[type="file"] {
+  margin: 15px 0;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.2em; /* Larger input field */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #ffffff;
+  color: #2575fc;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+input[type="file"]:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+.bounce-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em; /* Larger button */
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.bounce-button:hover {
+  background-color: #e68900;
+  transform: translateY(-2px);
+}
+
+/* Updated Result Box */
+.fade-in-result {
+  background: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
+  padding: 25px; /* More padding for spacing */
+  color: white; /* Keep text white for readability */
+  text-align: left;
+  max-width: 90%; /* Wider for more space */
+  margin: 20px auto; /* Center the result box */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 15px; /* Slightly rounder corners */
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Add a stronger shadow for depth */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for clarity */
+  font-size: 1.2em; /* Slightly larger font for better visibility */
+  animation: fadeInExpand 1.5s ease-in; /* New animation for better focus */
+  position: relative;
+}
+
+/* New Animation for the Result Box */
+@keyframes fadeInExpand {
+  0% {
+    transform: scale(0.9); /* Start slightly smaller */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: scale(1); /* Grow to full size */
+    opacity: 1; /* Fade in completely */
+  }
+}
+
+/* Background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://source.unsplash.com/1920x1080/?technology,coding');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%) blur(3px);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
